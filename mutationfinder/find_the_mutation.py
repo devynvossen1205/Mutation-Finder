@@ -6,7 +6,7 @@ def parse_file(filename):
     with open(filename, "r") as file: 
         for line in file:
             line = line.strip()
-            if not line.startswith(">"):  # Skip header lines
+            if line.startswith(">"):  # Skip header lines
                 continue
             sequence += line  # Append the sequence lines together
     return sequence
